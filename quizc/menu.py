@@ -38,8 +38,5 @@ Quizc - A command quiz utility
                 QuizUIHandler.show_quiz(self.quiz_answers)
         elif option == "4":
             should_exit = True
-<<<<<<< HEAD
-=======
 
->>>>>>> 90b8ccff3ce47341b3d767a3529804b87111e4d1
         return should_exit
