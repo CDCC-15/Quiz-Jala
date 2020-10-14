@@ -12,7 +12,8 @@ class QuizUIHandler(object):
         menu = QuizUIMenu()
         return menu.handle_create_quiz()
 
-    def fill_quiz(self, quiz) -> QuizAnswer:
+    @staticmethod
+    def fill_quiz(quiz) -> QuizAnswer:
         quiz_answer = QuizAnswer(quiz)
         question_handler = QuestionInputHandler()
         print("Quiz:" + quiz.title)
@@ -20,7 +21,7 @@ class QuizUIHandler(object):
             answers = question_handler.ask_question_value(question)
             answer = Answer(answers, question)
             quiz_answer.add_answer(answer)
-            self.store_quiz(quiz.title, quiz_answer)
+            # self.store_quiz(quiz.title, quiz_answer)
         return quiz_answer
 
     @staticmethod
@@ -35,5 +36,4 @@ class QuizUIHandler(object):
         for answer in quiz_answer.answers:
             print(answer.question.title)
             print("ATQ: " + answer.answers[0] + "\n")
-            print(answer)
         return quiz_answer

@@ -18,6 +18,6 @@ class MyEncoder(JSONEncoder):
 store = Store(4, 5)
 json = MyEncoder().encode(store)
 
-f = open("myform.json", "w")
+f = open("quizs.json", "w")
 f.write(json)
 f.close()
