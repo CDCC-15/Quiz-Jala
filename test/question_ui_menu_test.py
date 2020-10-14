@@ -29,7 +29,11 @@ class QuestionUIMenuTest(unittest.TestCase):
     def test_menu_ask_question_title(self, mock_input):
         menu = QuestionUIMenu()
         title = menu.ask_question_title()
+<<<<<<< HEAD
         self.assertEqual(title, self.QUESTION_TITLE)
+=======
+        self.assertNotEqual(title, self.QUESTION_TITLE)
+>>>>>>> 90b8ccff3ce47341b3d767a3529804b87111e4d1
 
     @patch('builtins.input', side_effect=[ValidatorType.MIN_LENGTH.code, ValidatorType.REQUIRED.code, EXIT])
     def test_menu_ask_question_validators(self, mock_input):
